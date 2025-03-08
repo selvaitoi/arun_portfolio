@@ -101,7 +101,7 @@ const About = () => {
 
           <div className="text-center mt-10">
             <a 
-              href="#" 
+              href="./public/ArunStelin.pdf" 
               className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition-colors animate-fade-in"
               style={{ animationDelay: "0.4s" }}
             >
