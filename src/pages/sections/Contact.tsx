@@ -11,18 +11,18 @@ const Contact = () => {
     email: "",
     message: ""
   });
-
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+    
     // EmailJS configuration
     const templateParams = {
       from_name: formData.name,
@@ -35,17 +35,17 @@ const Contact = () => {
     try {
       // Replace these with your actual EmailJS service, template, and user IDs
       await emailjs.send(
-        'service_rke80dn',  // Replace with your EmailJS service ID
-        'template_jmkhfms', // Replace with your EmailJS template ID
+        'service_id',  // Replace with your EmailJS service ID
+        'template_id', // Replace with your EmailJS template ID
         templateParams,
-        'BqKMTjLpMFZe5CvrE'      // Replace with your EmailJS public key
+        'user_id'      // Replace with your EmailJS public key
       );
-
+      
       toast({
         title: "Message sent successfully!",
         description: "Thank you for reaching out. I'll get back to you soon.",
       });
-
+      
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("Error sending email:", error);
@@ -58,7 +58,7 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
-
+  
   return (
     <div className="py-16" id="contact">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,10 +71,10 @@ const Contact = () => {
               Have a question or want to work together?
             </p>
           </div>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <a
-              href="mailto:knightarun7@gmail.com"
+            <a 
+              href="mailto:knightarun7@gmail.com" 
               className="glass-card glass-card-dark rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 animate-fade-in"
               style={{ animationDelay: "0.1s" }}
             >
@@ -84,11 +84,11 @@ const Contact = () => {
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Email</h3>
               <p className="text-blue-600 dark:text-blue-400 break-all">knightarun7@gmail.com</p>
             </a>
-
-            <a
-              href="https://linkedin.com/in/arun-stelin-b9b2812a2/"
-              target="_blank"
-              rel="noopener noreferrer"
+            
+            <a 
+              href="https://linkedin.com/in/arun-stelin-b9b2812a2/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
               className="glass-card glass-card-dark rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
@@ -98,7 +98,7 @@ const Contact = () => {
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">LinkedIn</h3>
               <p className="text-blue-600 dark:text-blue-400">Connect with me</p>
             </a>
-
+            
             <div className="glass-card glass-card-dark rounded-xl p-6 text-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Send className="h-6 w-6 text-blue-600 dark:text-blue-400" />
@@ -107,12 +107,12 @@ const Contact = () => {
               <p className="text-slate-700 dark:text-slate-300">Chennai, India</p>
             </div>
           </div>
-
+          
           <div className="glass-card glass-card-dark rounded-xl p-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6 text-center">
               Send me a message
             </h2>
-
+            
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
@@ -128,7 +128,7 @@ const Contact = () => {
                   className="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 />
               </div>
-
+              
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
                   Email Address
@@ -143,7 +143,7 @@ const Contact = () => {
                   className="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 />
               </div>
-
+              
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
                   Message
@@ -158,7 +158,7 @@ const Contact = () => {
                   className="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 />
               </div>
-
+              
               <div className="flex justify-center">
                 <button
                   type="submit"
