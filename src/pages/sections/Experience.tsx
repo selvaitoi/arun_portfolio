@@ -5,32 +5,22 @@ import { cn } from "@/lib/utils";
 
 const Experience = () => {
   const [activeTab, setActiveTab] = useState<string>("work");
-  
+
   const experiences = [
     {
       company: "Northern Base Technologies LLP",
-      role: "HR IT/Technical Recruiter",
+      role: "HR Recruiter",
       period: "2024 - Present",
       responsibilities: [
-        "Source and recruit top IT talent for technical positions",
-        "Conduct initial screening interviews and technical assessments",
-        "Collaborate with hiring managers to define job requirements",
-        "Develop and implement efficient recruitment strategies",
-        "Maintain candidate database and track recruitment metrics",
-        "Represent the company at recruitment events and job fairs"
       ],
-      logo: "NB"
+      logo: "NB.jpg"
     },
     {
       company: "Jet Cool",
       role: "HR Intern",
       period: "2024",
       responsibilities: [
-        "Assisted in recruitment and onboarding processes",
-        "Managed employee documentation and records",
-        "Supported HR team with administrative tasks",
-        "Participated in employee engagement initiatives",
-        "Helped with HR policy implementation"
+
       ],
       logo: "JC"
     },
@@ -39,26 +29,18 @@ const Experience = () => {
       role: "Process Associate",
       period: "2022 - 2024",
       responsibilities: [
-        "Managed customer service operations for retail clients",
-        "Processed technical support requests and escalations",
-        "Maintained accurate documentation of processes",
-        "Collaborated with cross-functional teams",
-        "Identified process improvement opportunities"
+
       ],
-      logo: "VG"
+      logo: "/logo_vg.png"
     },
     {
       company: "B2C Technologies",
       role: "Process Associate",
       period: "2021 - 2022",
       responsibilities: [
-        "Handled customer inquiries and service requests",
-        "Processed customer data and maintained records",
-        "Supported internal operations and team initiatives",
-        "Contributed to process optimization efforts",
-        "Assisted with technical documentation"
+
       ],
-      logo: "B2C"
+      logo: "B2C.png"
     }
   ];
 
@@ -74,7 +56,7 @@ const Experience = () => {
               A journey through my professional career
             </p>
           </div>
-          
+
           <div className="mb-12 animate-fade-in">
             <nav className="flex border-b border-blue-100 dark:border-blue-900/30">
               <button
@@ -91,13 +73,13 @@ const Experience = () => {
               </button>
             </nav>
           </div>
-          
+
           <div className="animate-fade-in">
             {activeTab === "work" && (
               <div className="space-y-6">
                 {experiences.map((job, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="timeline-item animate-fade-in-up"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
@@ -105,9 +87,15 @@ const Experience = () => {
                     <div className="glass-card glass-card-dark rounded-xl p-6 mb-2 ml-6">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                         <div className="flex items-center">
-                          <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white font-bold text-lg mr-4 flex-shrink-0">
-                            {job.logo}
+                          <div className=" w-16 h-16 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            {job.logo === "JC" ? (
+                              <span className="text-xl font-semibold">{job.logo}</span>
+                            ) : (
+                              <img src={job.logo} alt="Logo" className="w-16 h-16 object-contain" />
+                            )}
                           </div>
+
+
                           <div>
                             <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{job.company}</h3>
                             <p className="text-blue-600 dark:text-blue-400 font-medium">{job.role}</p>

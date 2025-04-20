@@ -22,10 +22,10 @@ const About = () => {
                 Career Objective
               </h2>
               <p className="text-slate-700 dark:text-slate-200 mb-6 leading-relaxed">
-                Dedicated HR - IT/Technical Recruiter with a passion for connecting top-tier technical talent with innovative organizations. I leverage my expertise in recruitment processes, technical understanding, and interpersonal skills to identify and secure the best candidates for challenging roles across the IT sector.
+                As an HR professional specializing in IT/technical recruitment and HR administration, I am passionate about connecting top talent with innovative organizations. I manage the full recruitment cycle for IT roles, from sourcing to onboarding, leveraging my technical expertise to evaluate candidates for roles in software development, data science, cybersecurity, and more.
               </p>
               <p className="text-slate-700 dark:text-slate-200 leading-relaxed">
-                My goal is to contribute to organizational growth by building high-performing teams through strategic talent acquisition, relationship building, and effective candidate assessment.
+                In addition, I handle essential HR admin tasks, including maintaining employee records, payroll coordination, benefits administration, and ensuring compliance with labor laws and company policies. My strong communication and organizational skills enable me to efficiently manage HR operations while contributing to a positive workplace culture.
               </p>
             </div>
 
@@ -78,8 +78,8 @@ const About = () => {
                         </span>
                       </div>
                       <div className="skill-bar">
-                        <div 
-                          className="skill-progress transition-all duration-1000" 
+                        <div
+                          className="skill-progress transition-all duration-1000"
                           style={{ width: `${language.percent}%` }}
                         />
                       </div>
@@ -102,8 +102,8 @@ const About = () => {
             </div>
 
             <div className="text-center mt-10">
-              <a 
-                href="./public/ArunStelin.pdf" 
+              <a
+                href="./public/ArunStelin.pdf"
                 className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition-colors animate-fade-in"
                 style={{ animationDelay: "0.4s" }}
               >

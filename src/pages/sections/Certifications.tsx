@@ -4,13 +4,25 @@ import { Award, BookOpen, Calendar } from "lucide-react";
 const Certifications = () => {
   const certifications = [
     {
+      name: "Keka HR ATS",
+      issuer: "Keka HR",
+      date: "March 2025",
+      description: "Certification in Keka HR ATS"
+    },
+    {
+      name: "Naukri Gulf Recruiter",
+      issuer: "www.naukrigulf.com",
+      date: "March 2025",
+      description: "Certification in recruitment & talent acquisition."
+    },
+    {
       name: "Naukri Maestro Recruiter",
       issuer: "Naukri.com",
       date: "February 2025",
-      description: "Advanced certification in technical recruitment strategies and talent acquisition."
-    }
+      description: "Advanced certification in technical recruitment strategies & talent acquisition."
+    },
   ];
-  
+
   const education = [
     {
       degree: "MBA – Human Resource & Operations",
@@ -31,7 +43,7 @@ const Certifications = () => {
       description: "Completed higher secondary education with focus on general studies."
     }
   ];
-  
+
   return (
     <div className="py-16" id="certifications">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +56,7 @@ const Certifications = () => {
               My academic background and professional credentials
             </p>
           </div>
-          
+
           <div className="mb-16 animate-fade-in">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400 mr-4">
@@ -54,11 +66,11 @@ const Certifications = () => {
                 Professional Certifications
               </h2>
             </div>
-            
+
             <div className="glass-card glass-card-dark rounded-xl">
               {certifications.map((cert, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`p-6 ${index !== certifications.length - 1 ? 'border-b border-blue-100 dark:border-blue-900/30' : ''}`}
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -84,7 +96,7 @@ const Certifications = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400 mr-4">
@@ -94,11 +106,11 @@ const Certifications = () => {
                 Education
               </h2>
             </div>
-            
+
             <div className="glass-card glass-card-dark rounded-xl">
               {education.map((edu, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`p-6 ${index !== education.length - 1 ? 'border-b border-blue-100 dark:border-blue-900/30' : ''} animate-fade-in`}
                   style={{ animationDelay: `${0.2 + (index * 0.1)}s` }}
                 >
@@ -125,7 +137,7 @@ const Certifications = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="text-center mt-12 animate-fade-in" style={{ animationDelay: "0.5s" }}>
             <p className="text-slate-600 dark:text-slate-300 italic">
               "Continuous learning is the key to staying relevant in the ever-evolving field of technical recruitment."

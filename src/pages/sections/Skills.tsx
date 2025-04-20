@@ -5,18 +5,6 @@ import { ArrowUpRight, Search, Users, Monitor, Briefcase, ListChecks } from "luc
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Recruitment Skills",
-      icon: <Search className="h-6 w-6" />,
-      skills: [
-        { name: "Candidate Screening", level: 95 },
-        { name: "Technical Interviewing", level: 90 },
-        { name: "Salary Negotiation", level: 85 },
-        { name: "ATS Management", level: 92 },
-        { name: "Talent Sourcing", level: 95 },
-        { name: "Candidate Relationship", level: 90 }
-      ]
-    },
-    {
       title: "HR Management",
       icon: <Users className="h-6 w-6" />,
       skills: [
@@ -24,9 +12,27 @@ const Skills = () => {
         { name: "Performance Management", level: 80 },
         { name: "Onboarding", level: 90 },
         { name: "Document Verification", level: 95 },
-        { name: "HR Policy Implementation", level: 85 }
+        { name: "HR Policy Implementation", level: 85 },
+        { name: "Compliances", level: 85 },
+        { name: "Coordination", level: 85 },
+        { name: "Admin Management", level: 85 },
       ]
     },
+    {
+      title: "Recruitment Skills",
+      icon: <Search className="h-6 w-6" />,
+      skills: [
+        { name: "Sourcing & Screening", level: 95 },
+        { name: "Technical Interviewing", level: 90 },
+        { name: "Negotiation", level: 85 },
+        { name: "ATS Management", level: 92 },
+        { name: "End To End Recruitment", level: 95 },
+        { name: "Preboarding", level: 90 },
+        { name: "Onboarding", level: 90 },
+        { name: "Candidate Relationship", level: 90 }
+      ]
+    },
+
     {
       title: "Tools & Platforms",
       icon: <Monitor className="h-6 w-6" />,
@@ -36,11 +42,11 @@ const Skills = () => {
         { name: "Indeed", level: 88 },
         { name: "Monster", level: 85 },
         { name: "Dice", level: 80 },
-        { name: "Applicant Tracking Systems", level: 90 }
+        { name: "Applicant Tracking System", level: 90 }
       ]
     }
   ];
-  
+
   return (
     <div className="py-16" id="skills">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,7 +59,7 @@ const Skills = () => {
               My professional abilities and technical competencies
             </p>
           </div>
-          
+
           <div className="space-y-12">
             {skillCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} className="animate-fade-in" style={{ animationDelay: `${categoryIndex * 0.1}s` }}>
@@ -65,21 +71,21 @@ const Skills = () => {
                     {category.title}
                   </h2>
                 </div>
-                
+
                 <div className="glass-card glass-card-dark rounded-xl p-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {category.skills.map((skill, skillIndex) => (
                       <div key={skillIndex} className="animate-fade-in" style={{ animationDelay: `${(categoryIndex * 0.1) + (skillIndex * 0.05)}s` }}>
                         <div className="flex justify-between mb-2">
                           <span className="font-medium text-slate-800 dark:text-slate-200">{skill.name}</span>
-                          <span className="text-blue-600 dark:text-blue-400">{skill.level}%</span>
+                          {/* <span className="text-blue-600 dark:text-blue-400">{skill.level}%</span> */}
                         </div>
-                        <div className="skill-bar">
-                          <div 
-                            className="skill-progress transition-all duration-1000 ease-out" 
+                        {/* <div className="skill-bar">
+                          <div
+                            className="skill-progress transition-all duration-1000 ease-out"
                             style={{ width: `${skill.level}%` }}
                           />
-                        </div>
+                        </div> */}
                       </div>
                     ))}
                   </div>
@@ -87,7 +93,7 @@ const Skills = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="glass-card glass-card-dark rounded-xl p-6 animate-fade-in" style={{ animationDelay: "0.4s" }}>
               <div className="flex items-center mb-4">
@@ -96,12 +102,12 @@ const Skills = () => {
               </div>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "IT Recruitment", "Software Development", "Cloud Technologies", 
+                  "IT Recruitment", "Software Development", "Cloud Technologies",
                   "Technical Requirements", "Market Trends", "Candidate Assessment",
                   "Talent Acquisition", "Compensation Structures"
                 ].map((tag, index) => (
-                  <span 
-                    key={index} 
+                  <span
+                    key={index}
                     className="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm"
                   >
                     {tag}
@@ -109,7 +115,7 @@ const Skills = () => {
                 ))}
               </div>
             </div>
-            
+
             <div className="glass-card glass-card-dark rounded-xl p-6 animate-fade-in" style={{ animationDelay: "0.5s" }}>
               <div className="flex items-center mb-4">
                 <ListChecks className="h-6 w-6 text-blue-600 dark:text-blue-400 mr-3" />
@@ -117,14 +123,14 @@ const Skills = () => {
               </div>
               <ul className="space-y-2">
                 {[
-                  "Technical Role Recruitment", 
+                  "Technical Role Recruitment",
                   "Full Lifecycle Recruitment",
                   "International Talent Acquisition",
                   "IT Candidate Assessment",
                   "Strategic Sourcing"
                 ].map((specialization, index) => (
-                  <li 
-                    key={index} 
+                  <li
+                    key={index}
                     className="flex items-center text-slate-700 dark:text-slate-200"
                   >
                     <ArrowUpRight className="h-4 w-4 text-blue-500 mr-2" />

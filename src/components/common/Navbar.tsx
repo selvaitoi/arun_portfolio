@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { log } from "console";
 
 export default function Navbar() {
   const [isDark, setIsDark] = useState(false);
@@ -30,11 +31,11 @@ export default function Navbar() {
 
   // Check for system preference on initial load
   useEffect(() => {
-    const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setIsDark(isDarkMode);
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    }
+    // const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    // setIsDark(isDarkMode);
+    // if (isDarkMode) {
+    document.documentElement.classList.add("dark");
+    // }
   }, []);
 
   // Update active section based on scroll position
@@ -79,8 +80,8 @@ export default function Navbar() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a 
-              href="#home" 
+            <a
+              href="#home"
               className="flex items-center"
               onClick={(e) => {
                 e.preventDefault();
