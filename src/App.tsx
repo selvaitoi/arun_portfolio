@@ -6,6 +6,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import { SplashCursor } from "@/components/ui/splash-cursor";
+
 
 // Components
 import Navbar from "./components/common/Navbar";
@@ -30,6 +32,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <SplashCursor />
         <AppContent />
       </BrowserRouter>
     </TooltipProvider>
@@ -46,8 +49,8 @@ const AppContent = () => {
       <main className="flex-grow">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
-            <Route 
-              path="/" 
+            <Route
+              path="/"
               element={
                 <PageTransition>
                   <div className="w-full">
@@ -59,7 +62,7 @@ const AppContent = () => {
                     <Contact />
                   </div>
                 </PageTransition>
-              } 
+              }
             />
             <Route path="*" element={<NotFound />} />
           </Routes>
