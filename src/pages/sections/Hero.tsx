@@ -40,17 +40,19 @@ const Hero = () => {
             </div>
           </div>
 
-        <div className="lg:w-5/12 flex justify-center lg:justify-end">
+      <div className="lg:w-5/12 flex justify-center lg:justify-end">
   <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-8 border-white dark:border-slate-800 shadow-xl animate-fade-in">
-    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-      <img
-        src="/image.jpg"
-        alt="Profile"
-        className="object-cover w-full h-full"
-      />
-    </div>
+    {/* Blue background circle */}
+    <div className="absolute inset-0 w-full h-full bg-blue-500" />
+    {/* Profile image on top */}
+    <img
+      src="/image.jpg"
+      alt="Profile"
+      className="object-cover w-full h-full rounded-full relative"
+    />
   </div>
 </div>
+
 
         </div>
 
