@@ -23,19 +23,6 @@ const Experience = () => {
       logo: "NB"
     },
     {
-      company: "Jet Cool",
-      role: "HR Intern",
-      period: "2024",
-      responsibilities: [
-        "Assisted in recruitment and onboarding processes",
-        "Managed employee documentation and records",
-        "Supported HR team with administrative tasks",
-        "Participated in employee engagement initiatives",
-        "Helped with HR policy implementation"
-      ],
-      logo: "JC"
-    },
-    {
       company: "Vision Group of Retail Technologies",
       role: "Process Associate",
       period: "2022 - 2024",
