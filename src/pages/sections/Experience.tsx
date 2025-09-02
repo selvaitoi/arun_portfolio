@@ -16,15 +16,6 @@ const Experience = () => {
       logo: "NB.jpg"
     },
     {
-      company: "Jet Cool",
-      role: "HR Intern",
-      period: "2024",
-      responsibilities: [
-
-      ],
-      logo: "JC"
-    },
-    {
       company: "Vision Group of Retail Technologies",
       role: "Process Associate",
       period: "2022 - 2024",
