@@ -40,13 +40,18 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="lg:w-5/12 flex justify-center lg:justify-end">
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-8 border-white dark:border-slate-800 shadow-xl animate-fade-in">
-              <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-                <span className="text-3xl font-bold text-white">AS</span>
-              </div>
-            </div>
-          </div>
+        <div className="lg:w-5/12 flex justify-center lg:justify-end">
+  <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-8 border-white dark:border-slate-800 shadow-xl animate-fade-in">
+    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+      <img
+        src="/image.jpeg"
+        alt="Profile"
+        className="object-cover w-full h-full"
+      />
+    </div>
+  </div>
+</div>
+
         </div>
 
         <div className="mt-20 md:mt-32">
