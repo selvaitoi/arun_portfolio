@@ -25,11 +25,12 @@ const Contact = () => {
     
     // EmailJS configuration
     const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      to_name: "Arun Stelin",
+      from_name: "Arun Stelin",
+      from_email: "knightarun7@gmail.com",
+      to_name: formData.name ,
       to_email: formData.email,
       message: formData.message,
+      name: formData.name,
     };
 
     try {
