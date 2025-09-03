@@ -35,10 +35,10 @@ const Contact = () => {
     try {
       // Replace these with your actual EmailJS service, template, and user IDs
       await emailjs.send(
-        'service_id',  // Replace with your EmailJS service ID
-        'template_id', // Replace with your EmailJS template ID
+        'service_l8sewli',  // Replace with your EmailJS service ID
+        'template_dklxj3k', // Replace with your EmailJS template ID
         templateParams,
-        'user_id'      // Replace with your EmailJS public key
+        'lXJSXzsD6L00CFfgB'      // Replace with your EmailJS public key
       );
       
       toast({
